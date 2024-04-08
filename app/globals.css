@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  font-size: 4vw;
+
+  h1 {
+    letter-spacing: -0.1ch;
+  }
+}
