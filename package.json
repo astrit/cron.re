@@ -2,6 +2,7 @@
   "name": "calist",
   "version": "0.1.0",
   "private": true,
+  "author": "astrit",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
