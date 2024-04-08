@@ -7,16 +7,20 @@ body {
   min-height: 100vh;
   background-color: black;
   color: white;
-  font-size: 2vw;
+  margin: unset;
+  padding: unset;
 
   h1 {
+    font-size: 6vw;
     letter-spacing: -0.1ch;
+    line-height: 1;
   }
 
   figure {
+    max-width: 920px;
     img {
       display: flex;
-      object-fit: contain;
+      object-fit: cover;
       width: 100%;
       height: auto;
     }

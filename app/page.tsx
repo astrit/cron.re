@@ -5,10 +5,9 @@ export default function Home() {
   return (
     <main>
       <h1>Calist.</h1>
-      <p>No BS* Calendar.</p>
       <figure>
         <Image
-          src="/raycast.png"
+          src="/extension.png"
           alt="Calist on Raycast"
           width={2000}
           height={1250}
