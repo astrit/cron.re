@@ -2,12 +2,23 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-items: center;
+  text-align: center;
   min-height: 100vh;
   background-color: black;
   color: white;
-  font-size: 4vw;
+  font-size: 2vw;
 
   h1 {
     letter-spacing: -0.1ch;
+  }
+
+  figure {
+    img {
+      display: flex;
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
   }
 }
