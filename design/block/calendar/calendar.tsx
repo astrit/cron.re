@@ -5,44 +5,6 @@ import "@/calendar/calendar.css"
 export default function Calendar() {
   return (
     <div className="calendar">
-      <section className="weeks" data-weeks="All week days">
-        <div data-empty="·">·</div>
-        <span data-dayname="M">M</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="W">W</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="F">F</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="M">M</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="W">W</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="F">F</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="M">M</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="W">W</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="F">F</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="M">M</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="W">W</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="F">F</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="M">M</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="W">W</span>
-        <span data-dayname="T">T</span>
-        <span data-dayname="F">F</span>
-        <span data-dayname="S">S</span>
-        <span data-dayname="S">S</span>
-      </section>
       <section data-month="January 01 2024">
         <div className="month">01</div>
         <span data-day="M">01</span>
