@@ -1,7 +1,5 @@
 "use client"
 
-import React, { useState } from "react"
-
 import "@/calendar/calendar.css"
 
 export default function Calendar() {
