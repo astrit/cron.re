@@ -15,20 +15,20 @@ import "#/global.css"
 export const metadata: Metadata = {
   metadataBase: new URL("https://cron.re"),
   title: {
-    default: "Cron",
-    template: "%s · Cron",
+    default: "cron",
+    template: "%s · cron",
   },
   description: "",
   openGraph: {
-    title: "Cron",
+    title: "cron",
     description: "",
     url: "https://cron.re",
-    siteName: "Cron",
+    siteName: "cron",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: `https://cron.re/og?title=Cron`,
+        url: `https://cron.re/og?title=cron`,
       },
     ],
   },
