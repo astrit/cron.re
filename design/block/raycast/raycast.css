@@ -1,0 +1,15 @@
+.extension {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1ch;
+  font-size: var(--slant-font-size-body-m);
+  padding: var(--slant-size-08) var(--slant-size-12);
+  min-height: 1.4lh;
+
+  .icon.raycast {
+    fill: none;
+    stroke: none;
+    height: 1.2lh;
+  }
+}

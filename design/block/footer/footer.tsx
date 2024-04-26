@@ -1,21 +1,23 @@
-"use client";
+"use client"
 
-import React from "react";
-import Progress from "@/progress/progress";
-import { Toggle } from "@/toggle/toggle";
+import React from "react"
+import Progress from "@/progress/progress"
+import { Toggle } from "@/toggle/toggle"
 
-import "@/footer/footer.css";
+import "@/footer/footer.css"
+
+import Raycast from "@/raycast/raycast"
 
 function Split() {
-  return <span className="split">·</span>;
+  return <span className="split">·</span>
 }
 
 function Left({ children }: { children?: React.ReactNode }) {
-  return <div className="sides left">{children}</div>;
+  return <div className="sides left">{children}</div>
 }
 
 function Right({ children }: { children?: React.ReactNode }) {
-  const elements = [<Progress />];
+  const elements = [<Progress />]
   return (
     <div className="sides right">
       {elements.map((element, index) => (
@@ -25,7 +27,7 @@ function Right({ children }: { children?: React.ReactNode }) {
         </React.Fragment>
       ))}
     </div>
-  );
+  )
 }
 
 export default function Footer() {
@@ -34,7 +36,8 @@ export default function Footer() {
       <Left>
         <Toggle />
       </Left>
+      <Raycast />
       <Right />
     </footer>
-  );
+  )
 }
