@@ -2,20 +2,12 @@ header nav {
   display: flex;
   flex-direction: row;
   gap: 4ch;
+  font-family: var(--font-manrope);
 
   a {
     transition: var(--slant-motion-transition);
     padding-inline: var(--slant-size-12);
     padding-block: var(--slant-size-08);
-
-    svg.lona {
-      stroke: currentColor;
-      stroke-width: 4px;
-      transition: var(--slant-motion-transition);
-      :not(:hover) & {
-        color: var(--slant-color-neutral-600);
-      }
-    }
 
     @media (hover: hover) {
       &:hover,

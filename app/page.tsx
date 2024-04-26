@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useContext } from "react"
+import React, { useContext, useState } from "react"
+import Calendar from "@/calendar/calendar"
 import Time from "@/time/time"
 import Home from "&/home/home"
 import { Controller } from "$/provider/provider"
@@ -16,7 +17,7 @@ export default function HomePage() {
 
   return (
     <Home data-title={title} data-description={description}>
-      <Time />
+      <Calendar />
     </Home>
   )
 }

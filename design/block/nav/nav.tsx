@@ -5,7 +5,7 @@ import Link from "@/link/link"
 
 import "@/nav/nav.css"
 
-const Links = [{ href: "/", label: "cron", title: "cron" }]
+const Links = [{ href: "/", label: ": cron", title: "Cron" }]
 
 export default function Nav() {
   const current = usePathname()

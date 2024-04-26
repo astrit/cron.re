@@ -7,6 +7,8 @@ import Nav from "@/nav/nav"
 
 import "@/header/header.css"
 
+import Time from "@/time/time"
+
 function Left({ children }: { children: ReactNode }) {
   return <div className="sides left">{children}</div>
 }
@@ -23,7 +25,7 @@ export default function Header() {
       <Left>
         <Nav />
       </Left>
-      <small></small>
+      <Time />
       <Right>: :</Right>
     </header>
   )

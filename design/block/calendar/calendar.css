@@ -1,0 +1,19 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+
+  section {
+    display: flex;
+    gap: 1ch;
+
+    span,
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -15,7 +15,7 @@ import "#/global/global.css"
 export const metadata: Metadata = {
   metadataBase: new URL("https://cron.re"),
   title: {
-    default: "cron",
+    default: ":cron",
     template: "%s · cron",
   },
   description: "",
