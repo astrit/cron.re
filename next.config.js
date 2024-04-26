@@ -4,8 +4,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/review",
-        destination: "https://g.page/r/CcD7xCeijHu1EBM/review",
+        source: "/astrit",
+        destination: "https://astrit.co",
         permanent: true,
       },
     ]

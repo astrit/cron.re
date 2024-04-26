@@ -6,8 +6,8 @@
     justify-content: center;
     gap: 4lh;
     padding: calc(var(--slant-size-52) * 2);
-    font-family: var(--font-manrope);
-    font-size: 1vw;
+    /* font-family: var(--font-manrope);
+    font-size: 1vw; */
     min-height: 100vh;
 
     h1 {
