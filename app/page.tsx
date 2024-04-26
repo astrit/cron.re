@@ -1,18 +1,22 @@
-import Image from "next/image";
-import Link from "next/link";
+"use client"
 
-export default function Home() {
+import React, { useContext } from "react"
+import Home from "&/home/home"
+import { Controller } from "$/provider"
+import Time from "@/time/time"
+
+export default function HomePage() {
+  const { data } = useContext(Controller)
+
+  if (!data || !data.pages) {
+    return null
+  }
+
+  const { title, description } = data.pages[0]
+
   return (
-    <main>
-      <h1>Calist.</h1>
-      <figure>
-        <Image
-          src="/extension.png"
-          alt="Calist on Raycast"
-          width={2000}
-          height={1250}
-        />
-      </figure>
-    </main>
-  );
+    <Home data-title={title} data-description={description} >
+      <Time />
+    </Home>
+  )
 }

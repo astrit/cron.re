@@ -1,0 +1,8 @@
+.layout {
+  &.work {
+    display: flex;
+    flex-direction: column;
+    gap: var(--lona-size-64);
+    padding: calc(var(--lona-size-52) * 4) calc(var(--lona-size-52) * 2);
+  }
+}

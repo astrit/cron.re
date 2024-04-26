@@ -1,0 +1,40 @@
+h1,
+.h1 {
+  font-size: var(--lona-font-size-h1);
+  text-wrap: balance;
+  max-width: 24ch;
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2,
+.h2 {
+  font-size: var(--lona-font-size-h2);
+  text-wrap: balance;
+  color: var(--lona-color-neutral-500);
+  font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h3,
+.h3 {
+  font-size: var(--lona-font-size-h3);
+  text-wrap: balance;
+  color: var(--lona-color-neutral-600);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.accent {
+  background-image: radial-gradient(
+    33.71% 127.73% at 69.54% 107.81%,
+    var(--color-accent-light) 0%,
+    var(--color-accent) 35.44%,
+    var(--color-text-1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}

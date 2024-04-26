@@ -1,0 +1,11 @@
+.layout {
+  &.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: calc(var(--lona-size-52) * 2);
+    padding: calc(var(--lona-size-52) * 2);
+  }
+}

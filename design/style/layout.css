@@ -1,0 +1,5 @@
+.layout:is(.about, .work, .home, .resume) {
+  translate: 0 1lh;
+  opacity: 0;
+  animation: fade 468ms ease forwards;
+}

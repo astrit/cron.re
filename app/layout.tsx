@@ -1,22 +1,77 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import React, { Suspense } from "react"
+import type { Metadata } from "next"
+import Favicon from "@/fav/fav"
+import Footer from "@/footer/footer"
+import Header from "@/header/header"
+import Preloader from "@/preloader/preloader"
+import { Analytics } from "@vercel/analytics/react"
+import Article from "&/article/article"
+import Main from "&/main/main"
+import Fonts from "$/fonts/fonts"
+import { Provider } from "$/provider"
 
-const inter = Inter({ subsets: ["latin"] });
+import "#/global.css"
 
 export const metadata: Metadata = {
-  title: "Calist",
-  description: "Agenda for minimalist",
-};
+  metadataBase: new URL("https://cron.re"),
+  title: {
+    default: "Cron",
+    template: "%s · Cron",
+  },
+  description: "",
+  openGraph: {
+    title: "Cron",
+    description: "",
+    url: "https://cron.re",
+    siteName: "Cron",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: `https://cron.re/og?title=Cron`,
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Suspense fallback={<Preloader />}>
+          <Provider
+            attribute="theme"
+            defaultTheme="dark"
+            enableColorScheme={false}
+            enableSystem={true}
+          >
+            <Favicon />
+            <Fonts>
+              <Main>
+                <Header />
+                <Article>{children}</Article>
+                <Footer />
+              </Main>
+            </Fonts>
+          </Provider>
+        </Suspense>
+        <Analytics />
+      </body>
     </html>
-  );
+  )
 }
