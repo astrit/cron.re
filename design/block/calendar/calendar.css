@@ -2,10 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 1ch;
+  font-family: var(--slant-font-ibm-plex);
 
   section {
     display: flex;
     gap: 1ch;
+    pointer-events: none;
+    user-select: none;
 
     span,
     div {
@@ -14,6 +17,16 @@
       justify-content: center;
       width: 24px;
       height: 24px;
+      text-align: center;
     }
+  }
+
+  .weeks {
+    opacity: 0.2;
+  }
+
+  .month,
+  [data-day="·"] {
+    opacity: 0.4;
   }
 }

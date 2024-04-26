@@ -8,7 +8,7 @@ export default function Calendar() {
   return (
     <div className="calendar">
       <section className="weeks" data-weeks="All week days">
-        <div data-empty="•">•</div>
+        <div data-empty="·">·</div>
         <span data-dayname="M">M</span>
         <span data-dayname="T">T</span>
         <span data-dayname="W">W</span>
@@ -46,7 +46,7 @@ export default function Calendar() {
         <span data-dayname="S">S</span>
       </section>
       <section data-month="January 01 2024">
-        <div>Jan</div>
+        <div className="month">01</div>
         <span data-day="M">01</span>
         <span data-day="T">02</span>
         <span data-day="W">03</span>
@@ -78,16 +78,16 @@ export default function Calendar() {
         <span data-day="M">29</span>
         <span data-day="T">30</span>
         <span data-day="W">31</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
       </section>
       <section data-month="February 02 2024">
-        <div>Feb</div>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
+        <div className="month">02</div>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
         <span data-day="T">01</span>
         <span data-day="F">02</span>
         <span data-day="S">03</span>
@@ -117,16 +117,16 @@ export default function Calendar() {
         <span data-day="T">27</span>
         <span data-day="W">28</span>
         <span data-day="T">29</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
       </section>
       <section data-month="March 03 2024">
-        <div>Mar</div>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
+        <div className="month">03</div>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
         <span data-day="F">01</span>
         <span data-day="S">02</span>
         <span data-day="S">03</span>
@@ -160,7 +160,7 @@ export default function Calendar() {
         <span data-day="S">31</span>
       </section>
       <section data-month="April 04 2024">
-        <div>Apr</div>
+        <div className="month">04</div>
         <span data-day="M">01</span>
         <span data-day="T">02</span>
         <span data-day="W">03</span>
@@ -191,16 +191,16 @@ export default function Calendar() {
         <span data-day="S">28</span>
         <span data-day="M">29</span>
         <span data-day="T">30</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
       </section>
       <section data-month="May 05 2024">
-        <div>May</div>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
+        <div className="month">05</div>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
         <span data-day="W">01</span>
         <span data-day="T">02</span>
         <span data-day="F">03</span>
@@ -231,9 +231,9 @@ export default function Calendar() {
         <span data-day="T">28</span>
         <span data-day="W">29</span>
         <span data-day="T">30</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
-        <span data-day="•">•</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
+        <span data-day="·">·</span>
       </section>
     </div>
   )
