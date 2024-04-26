@@ -25,3 +25,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
 }
+
+.layout:is(.about, .work, .home, .resume) {
+  translate: 0 1lh;
+  opacity: 0;
+  animation: fade 468ms ease forwards;
+}
+
+@keyframes fade {
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
