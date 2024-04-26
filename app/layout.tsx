@@ -8,9 +8,9 @@ import { Analytics } from "@vercel/analytics/react"
 import Article from "&/article/article"
 import Main from "&/main/main"
 import Fonts from "$/fonts/fonts"
-import { Provider } from "$/provider"
+import { Provider } from "$/provider/provider"
 
-import "#/global.css"
+import "#/global/global.css"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cron.re"),

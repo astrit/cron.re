@@ -2,6 +2,7 @@
 
 import { ReactNode } from "react"
 import { usePathname } from "next/navigation"
+import Link from "@/link/link"
 import Nav from "@/nav/nav"
 
 import "@/header/header.css"
@@ -22,6 +23,7 @@ export default function Header() {
       <Left>
         <Nav />
       </Left>
+      <small></small>
       <Right>: :</Right>
     </header>
   )

@@ -4,23 +4,23 @@ header nav {
   gap: 4ch;
 
   a {
-    transition: var(--lona-transition);
-    padding-inline: var(--lona-size-12);
-    padding-block: var(--lona-size-08);
+    transition: var(--slant-motion-transition);
+    padding-inline: var(--slant-size-12);
+    padding-block: var(--slant-size-08);
 
     svg.lona {
       stroke: currentColor;
       stroke-width: 4px;
-      transition: var(--lona-transition);
+      transition: var(--slant-motion-transition);
       :not(:hover) & {
-        color: var(--lona-color-neutral-600);
+        color: var(--slant-color-neutral-600);
       }
     }
 
     @media (hover: hover) {
       &:hover,
       &.active {
-        color: var(--lona-color-neutral-100);
+        color: var(--slant-color-neutral-100);
       }
     }
   }

@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: var(--lona-size-28);
-  block-size: var(--lona-size-28);
+  inline-size: var(--slant-size-28);
+  block-size: var(--slant-size-28);
 
   svg {
-    height: var(--lona-size-14);
+    height: var(--slant-size-14);
     stroke-width: 2;
     stroke: currentColor;
   }

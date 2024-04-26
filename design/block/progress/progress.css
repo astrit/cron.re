@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  inline-size: var(--lona-size-28);
-  block-size: var(--lona-size-28);
+  inline-size: var(--slant-size-28);
+  block-size: var(--slant-size-28);
 
   svg {
-    height: var(--lona-size-20);
+    height: var(--slant-size-20);
 
     circle {
       stroke-width: 2;

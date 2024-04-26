@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useContext } from "react"
-import Home from "&/home/home"
-import { Controller } from "$/provider"
 import Time from "@/time/time"
+import Home from "&/home/home"
+import { Controller } from "$/provider/provider"
 
 export default function HomePage() {
   const { data } = useContext(Controller)
@@ -15,7 +15,7 @@ export default function HomePage() {
   const { title, description } = data.pages[0]
 
   return (
-    <Home data-title={title} data-description={description} >
+    <Home data-title={title} data-description={description}>
       <Time />
     </Home>
   )

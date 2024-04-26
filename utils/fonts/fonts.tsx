@@ -1,53 +1,63 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { IBM_Plex_Mono, JetBrains_Mono, Silkscreen } from "next/font/google"
-import Inter from "$/fonts/Inter"
-import T26 from "$/fonts/t26"
+import { useEffect, useState } from "react";
+import {
+  IBM_Plex_Mono,
+  JetBrains_Mono,
+  Silkscreen,
+  Manrope,
+} from "next/font/google";
+import Inter from "$/fonts/Inter";
 
 const silk = Silkscreen({
   subsets: ["latin"],
   display: "block",
   weight: "400",
-  variable: "--lona-font-silk",
-})
+  variable: "--slant-font-silk",
+});
 
 const jetBrains = JetBrains_Mono({
   subsets: ["latin"],
   display: "block",
   weight: "400",
-  variable: "--lona-font-jet",
-})
+  variable: "--slant-font-jet",
+});
 
 const IBM = IBM_Plex_Mono({
   subsets: ["latin"],
   display: "block",
   weight: "400",
-  variable: "--lona-font-ibm-plex",
-})
+  variable: "--slant-font-ibm-plex",
+});
+
+const man = Manrope({
+  subsets: ["latin"],
+  display: "block",
+  variable: "--font-manrope",
+});
 
 export default function Fonts({ children }: { children: React.ReactNode }) {
-  const [stylesheetCreated, setStylesheetCreated] = useState(false)
+  const [stylesheetCreated, setStylesheetCreated] = useState(false);
 
   useEffect(() => {
     if ("adoptedStyleSheets" in document) {
-      const sheet = new CSSStyleSheet()
+      const sheet = new CSSStyleSheet();
       sheet.replaceSync(`
         :root { 
-            --lona-font-inter: ${Inter.style.fontFamily}; 
-            --lona-font-silk: ${silk.style.fontFamily};
-            --lona-font-jet: ${jetBrains.style.fontFamily};
-            --lona-font-t26: ${T26.style.fontFamily};
-            --lona-font-ibm: ${IBM.style.fontFamily};
-        }`)
-      document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet]
-      setStylesheetCreated(true)
+            --slant-font-inter: ${Inter.style.fontFamily}; 
+            --slant-font-silk: ${silk.style.fontFamily};
+            --slant-font-jet: ${jetBrains.style.fontFamily};
+            --slant-font-ibm: ${IBM.style.fontFamily};
+            --font-manrope: ${man.style.fontFamily};
+        }`);
+      document.adoptedStyleSheets = [...document.adoptedStyleSheets, sheet];
+      setStylesheetCreated(true);
     }
-  }, [])
+  }, []);
 
   if (!stylesheetCreated) {
-    return null
+    return null;
   }
 
-  return children
+  return children;
 }
