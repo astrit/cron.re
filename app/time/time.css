@@ -1,0 +1,36 @@
+.timer {
+  display: flex;
+  gap: 10ch;
+
+  .digital {
+    display: flex;
+    flex-direction: column;
+    gap: 1lh;
+    font-size: var(--slant-font-size-body-m);
+
+    > div {
+      display: flex;
+      gap: 1ch;
+
+      div,
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+
+        &::before {
+          content: "·";
+        }
+      }
+
+      span {
+        opacity: 0.1;
+      }
+    }
+    /* 
+
+    */
+  }
+}
