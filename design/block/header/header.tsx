@@ -26,7 +26,9 @@ export default function Header() {
         <Nav />
       </Left>
       <Time />
-      <Right>: :</Right>
+      <Right>
+        <button>: :</button>
+      </Right>
     </header>
   )
 }
