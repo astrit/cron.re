@@ -18,6 +18,15 @@
       width: 24px;
       height: 24px;
       text-align: center;
+      position: relative;
+    }
+
+    &:nth-child(1) {
+      .day::before {
+        content: attr(data-day);
+        position: absolute;
+        top: -1lh;
+      }
     }
   }
 

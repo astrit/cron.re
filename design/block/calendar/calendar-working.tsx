@@ -2,14 +2,8 @@
 
 import "@/calendar/calendar.css"
 
-export default function Calendar() {
-  const weekStartsOn = 0
+export default function CalendarV1() {
   const days = ["M", "T", "W", "T", "F", "S", "S"]
-
-  // if (weekStartsOn === 1) {
-  //   const sunday = days.shift()
-  //   days.push(sunday)
-  // }
 
   function detDaysAndFirstDay(year: number, month: number) {
     const monthDate = new Date(year, month - 1, 1)
@@ -42,8 +36,23 @@ export default function Calendar() {
     <div className="calendar">
       <section className="weeks">
         <span>·</span>
-        {Array.from({ length: 37 }, (_, i) => (
-          <span key={i}>{days[i % 7]}</span>
+        {days.map((day, index) => (
+          <span key={index}>{day}</span>
+        ))}
+        {days.map((day, index) => (
+          <span key={index}>{day}</span>
+        ))}
+        {days.map((day, index) => (
+          <span key={index}>{day}</span>
+        ))}
+        {days.map((day, index) => (
+          <span key={index}>{day}</span>
+        ))}
+        {days.map((day, index) => (
+          <span key={index}>{day}</span>
+        ))}
+        {days.map((day, index) => (
+          <span key={index}>{day}</span>
         ))}
       </section>
       {calendar.map((month) => (
@@ -53,9 +62,7 @@ export default function Calendar() {
             <span data-day="·">·</span>
           ))}
           {Array.from({ length: month.numberOfDays }, (_, i) => (
-            <div className="day" data-day={days[(month.firstDay + i) % 7]}>
-              <span className="day-number">{i + 1}</span>
-            </div>
+            <span data-day={i + 1}>{i + 1}</span>
           ))}
           {Array.from(
             { length: 37 - month.firstDay - month.numberOfDays },
