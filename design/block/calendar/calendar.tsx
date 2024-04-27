@@ -39,6 +39,8 @@ export default function Calendar() {
         setYear((prevYear) => prevYear - 1)
       } else if (event.key === "ArrowRight") {
         setYear((prevYear) => prevYear + 1)
+      } else if (event.code === "Space") {
+        setYear(new Date().getFullYear())
       }
     }
 
@@ -59,41 +61,13 @@ export default function Calendar() {
           .toString()
           .split("")
           .map((digit, index) => (
-            <span key={index}>{digit}</span>
+            <span className="year" key={index}>
+              {digit}
+            </span>
           ))}
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
+        {Array.from({ length: 33 }, (_, index) => (
+          <span key={index + 4}>·</span>
+        ))}
       </section>
       <section className="weeks">
         <span>·</span>
@@ -120,6 +94,17 @@ export default function Calendar() {
           )}
         </section>
       ))}
+      <small>
+        <span>
+          <kbd>Left</kbd> Previous year
+        </span>
+        <span>
+          <kbd>Right</kbd> Next year
+        </span>
+        <span>
+          <kbd>Space</kbd> Current year
+        </span>
+      </small>
     </div>
   )
 }

@@ -28,6 +28,12 @@
         top: -1lh;
       }
     }
+
+    &.year {
+      span:not(.year) {
+        opacity: 0.2;
+      }
+    }
   }
 
   .weeks {
@@ -37,5 +43,30 @@
   .month,
   [data-day="·"] {
     opacity: 0.4;
+  }
+
+  small {
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid var(--slant-color-neutral-700-40);
+    padding-top: 2lh;
+    margin-top: 2lh;
+    gap: 4ch;
+    line-height: 1;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 1ch;
+      color: var(--slant-color-neutral-600);
+    }
+
+    kbd {
+      display: flex;
+      padding: 0.4lh 1ch;
+      border-radius: var(--slant-border-radius-04);
+      background-color: var(--slant-color-neutral-700-40);
+      color: var(--slant-color-neutral-100);
+    }
   }
 }
