@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useEffect, useState } from "react"
-import { toast } from "sonner"
 
 import "@/calendar/calendar.css"
 
@@ -32,13 +31,16 @@ export default function Calendar() {
   }
 
   const [year, setYear] = useState(2024)
+  const calendar = createYearCalendar(year)
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "ArrowLeft") {
-        setYear((prevYear) => prevYear - 1)
-      } else if (event.key === "ArrowRight") {
-        setYear((prevYear) => prevYear + 1)
+      if (event.ctrlKey) {
+        if (event.key === "ArrowLeft") {
+          setYear((prevYear) => prevYear - 1)
+        } else if (event.key === "ArrowRight") {
+          setYear((prevYear) => prevYear + 1)
+        }
       }
     }
 
@@ -48,53 +50,8 @@ export default function Calendar() {
       window.removeEventListener("keydown", handleKeyDown)
     }
   }, [])
-
-  const calendar = createYearCalendar(year)
-
   return (
     <div className="calendar">
-      <section className="year">
-        <span>·</span>
-        {year
-          .toString()
-          .split("")
-          .map((digit, index) => (
-            <span key={index}>{digit}</span>
-          ))}
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-        <span>·</span>
-      </section>
       <section className="weeks">
         <span>·</span>
         {Array.from({ length: 37 }, (_, i) => (
