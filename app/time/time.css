@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 1lh;
-    font-size: var(--slant-font-size-body-m);
+    font-size: var(--slant-font-size-body-l);
 
     > div {
       display: flex;
