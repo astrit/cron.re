@@ -6,7 +6,7 @@ import Link from "@/link/link"
 import "@/nav/nav.css"
 
 const Links = [
-  { href: "/", label: "cron", title: "Cron" },
+  { href: "/", label: "C R ＊ N", title: "Cron" },
   { href: "/time", label: "time", title: "time" },
 ]
 

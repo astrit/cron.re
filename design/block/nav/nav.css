@@ -9,6 +9,10 @@ header nav {
     padding-inline: var(--slant-size-12);
     padding-block: var(--slant-size-08);
 
+    &:first-child {
+      font-family: var(--slant-font-silk);
+    }
+
     @media (hover: hover) {
       &:hover,
       &.active {
