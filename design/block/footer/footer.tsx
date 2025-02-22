@@ -6,7 +6,7 @@ import { Toggle } from "@/toggle/toggle"
 
 import "@/footer/footer.css"
 
-import Raycast from "@/raycast/raycast"
+import Raycast from "@/header/raycast/raycast"
 
 function Split() {
   return <span className="split">·</span>
@@ -36,7 +36,6 @@ export default function Footer() {
       <Left>
         <Toggle />
       </Left>
-      <Raycast />
       <Right />
     </footer>
   )

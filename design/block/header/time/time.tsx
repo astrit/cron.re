@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import Separator from "@/separator/separator"
 
 export default function Time() {
   const [time, setTime] = useState("")

@@ -1,29 +1,34 @@
 {
-    "icons": [
-        {
-            "name": "light",
-            "path": "<circle cx='12' cy='12' r='5' /> <line x1='12' y1='1' x2='12' y2='3' /> <line x1='12' y1='21' x2='12' y2='23' /> <line x1='4.22' y1='4.22' x2='5.64' y2='5.64' /> <line x1='18.36' y1='18.36' x2='19.78' y2='19.78' /> <line x1='1' y1='12' x2='3' y2='12' /> <line x1='21' y1='12' x2='23' y2='12' /> <line x1='4.22' y1='19.78' x2='5.64' y2='18.36' /> <line x1='18.36' y1='5.64' x2='19.78' y2='4.22' />",
-            "box": "0 0 24 24"
-        },
-        {
-            "name": "dark",
-            "path": "<path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z' />",
-            "box": "0 0 24 24"
-        },
-        {
-            "name": "separator",
-            "path": "<line x1='0' y1='0' x2='0' y2='10' opacity='0.2' />",
-            "box": "0 0 1 10"
-        },
-        {
-            "name": "chevron",
-            "path": "<polyline points='9 18 15 12 9 6'/>",
-            "box": "0 0 24 24"
-        },
-        {
-            "name": "raycast",
-            "path": "<path fill-rule='evenodd' clip-rule='evenodd' d='M6 15.496V18L0 12L1.251 10.749L6 15.496ZM8.504 18H6L12 24L13.251 22.749L8.504 18ZM22.744 13.253L23.997 12L11.997 0L10.747 1.256L15.494 6.003H12.626L9.312 2.696L8.061 3.947L10.121 6.008H8.681V15.322H17.995V13.882L20.056 15.942L21.307 14.692L17.995 11.378V8.508L22.744 13.253ZM6.626 5.379L5.37 6.632L6.714 7.975L7.966 6.723L6.626 5.379ZM17.282 16.035L16.03 17.288L17.373 18.632L18.626 17.379L17.282 16.035ZM3.939 8.065L2.686 9.32L6 12.632V10.126L3.939 8.065ZM13.88 18.005H11.374L14.687 21.319L15.94 20.066L13.88 18.005Z' fill='#FF6363' />",
-            "box": "0 0 24 24"
-        }
-    ]
+  "icons": [
+    {
+      "name": "light",
+      "path": "<circle cx='12' cy='12' r='5' /> <line x1='12' y1='1' x2='12' y2='3' /> <line x1='12' y1='21' x2='12' y2='23' /> <line x1='4.22' y1='4.22' x2='5.64' y2='5.64' /> <line x1='18.36' y1='18.36' x2='19.78' y2='19.78' /> <line x1='1' y1='12' x2='3' y2='12' /> <line x1='21' y1='12' x2='23' y2='12' /> <line x1='4.22' y1='19.78' x2='5.64' y2='18.36' /> <line x1='18.36' y1='5.64' x2='19.78' y2='4.22' />",
+      "box": "0 0 24 24"
+    },
+    {
+      "name": "dark",
+      "path": "<path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z' />",
+      "box": "0 0 24 24"
+    },
+    {
+      "name": "separator",
+      "path": "<line x1='0' y1='0' x2='0' y2='10' opacity='0.2' />",
+      "box": "0 0 1 10"
+    },
+    {
+      "name": "chevron",
+      "path": "<polyline points='9 18 15 12 9 6'/>",
+      "box": "0 0 24 24"
+    },
+    {
+      "name": "raycast",
+      "path": "<path fill-rule='evenodd' clip-rule='evenodd' d='M6 15.496V18L0 12L1.251 10.749L6 15.496ZM8.504 18H6L12 24L13.251 22.749L8.504 18ZM22.744 13.253L23.997 12L11.997 0L10.747 1.256L15.494 6.003H12.626L9.312 2.696L8.061 3.947L10.121 6.008H8.681V15.322H17.995V13.882L20.056 15.942L21.307 14.692L17.995 11.378V8.508L22.744 13.253ZM6.626 5.379L5.37 6.632L6.714 7.975L7.966 6.723L6.626 5.379ZM17.282 16.035L16.03 17.288L17.373 18.632L18.626 17.379L17.282 16.035ZM3.939 8.065L2.686 9.32L6 12.632V10.126L3.939 8.065ZM13.88 18.005H11.374L14.687 21.319L15.94 20.066L13.88 18.005Z' fill='#FF6363' />",
+      "box": "0 0 24 24"
+    },
+    {
+      "name": "chrome",
+      "path": "<path fill='#fff' d='M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z'/><path fill='url(#a)' d='M12 6h10A12 12 0 0 0 2 6l5 9a6 6 0 0 1 5-9Z'/><path fill='#1A73E8' d='M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z'/><path fill='url(#b)' d='m17 15-5 9A12 12 0 0 0 22 6H12a6 6 0 0 1 5 9Z'/><path fill='url(#c)' d='M7 15 2 6a12 12 0 0 0 10 18l5-9a6 6 0 0 1-10 0Z'/><defs><linearGradient id='a' x1='0' x2='24' y1='12' y2='12' gradientUnits='userSpaceOnUse'><stop stop-color='#D93025'/><stop offset='1' stop-color='#EA4335'/></linearGradient><linearGradient id='b' x1='-3.3' x2='7.5' y1='23.8' y2='-4.1' gradientUnits='userSpaceOnUse'><stop stop-color='#FCC934'/><stop offset='1' stop-color='#FBBC04'/></linearGradient><linearGradient id='c' x1='13.3' x2='2.9' y1='23.3' y2='5.3' gradientUnits='userSpaceOnUse'><stop stop-color='#1E8E3E'/><stop offset='1' stop-color='#34A853'/></linearGradient></defs>",
+      "box": "0 0 24 24"
+    }
+  ]
 }

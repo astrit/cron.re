@@ -1,0 +1,11 @@
+.extension {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .icon.chrome {
+    fill: none;
+    stroke: none;
+    height: 1.2lh;
+  }
+}

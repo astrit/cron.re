@@ -2,12 +2,13 @@
 
 import { ReactNode } from "react"
 import { usePathname } from "next/navigation"
-import Link from "@/link/link"
-import Nav from "@/nav/nav"
 
-import "@/header/header.css"
+import Chrome from "./chrome/chrome"
+import Nav from "./nav/nav"
+import Raycast from "./raycast/raycast"
+import Time from "./time/time"
 
-import Time from "@/time/time"
+import "./header.css"
 
 function Left({ children }: { children: ReactNode }) {
   return <div className="sides left">{children}</div>
@@ -25,9 +26,9 @@ export default function Header() {
       <Left>
         <Nav />
       </Left>
-      <Time />
       <Right>
-        <button>: :</button>
+        <Raycast />
+        <Chrome />
       </Right>
     </header>
   )

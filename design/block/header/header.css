@@ -22,6 +22,21 @@ header.main-header {
   .right {
     display: flex;
     align-items: center;
-    gap: 5ch;
+    gap: 2ch;
+    font-size: 10px;
+
+    .extension {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1ch;
+      padding: 1lh 2ch;
+
+      .icon {
+        fill: none;
+        stroke: none;
+        height: 1.2lh;
+      }
+    }
   }
 }

@@ -1,7 +1,7 @@
 import Icon from "@/icon/icon"
 import Link from "@/link/link"
 
-import "@/raycast/raycast.css"
+import "./raycast.css"
 
 export default function Raycast() {
   return (

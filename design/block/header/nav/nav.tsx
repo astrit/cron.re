@@ -3,11 +3,13 @@
 import { usePathname } from "next/navigation"
 import Link from "@/link/link"
 
-import "@/nav/nav.css"
+import Time from "../time/time"
+
+import "./nav.css"
 
 const Links = [
   { href: "/", label: "C R ＊ N", title: "Cron" },
-  { href: "/time", label: "time", title: "time" },
+  { href: "/time", label: <Time />, title: "time" },
 ]
 
 export default function Nav() {
