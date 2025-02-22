@@ -49,7 +49,7 @@ export function Provider({ children, ...props }: ThemeProviderProps) {
   return (
     <NextThemesProvider {...props}>
       <Controller.Provider value={value}>
-        <Preloader />
+        {/* <Preloader /> */}
         {children}
         <Toaster
           richColors

@@ -1,0 +1,12 @@
+.plain {
+  /* font-family: var(--font-manrope); */
+  font-size: 20vh;
+  user-select: none;
+  pointer-events: none;
+  transition: all 420ms;
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}

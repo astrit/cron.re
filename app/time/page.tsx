@@ -3,122 +3,92 @@
 import React, { useEffect, useState } from "react"
 import Home from "&/home/home"
 
-import "./time.css"
+import Time from "./dot"
+import Emoji from "./emoji"
+import Plain from "./plain"
 
-function DigitalNumber({ number }: { number: number }) {
-  const patterns = {
-    0: [
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-    ],
-    1: [
-      "<span></span><div></div><span></span>",
-      "<span></span><div></div><span></span>",
-      "<span></span><div></div><span></span>",
-      "<span></span><div></div><span></span>",
-      "<span></span><div></div><span></span>",
-    ],
-    2: [
-      "<div></div><div></div><div></div>",
-      "<span></span><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><span></span>",
-      "<div></div><div></div><div></div>",
-    ],
-    3: [
-      "<div></div><div></div><div></div>",
-      "<span></span><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-      "<span></span><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-    ],
-    4: [
-      "<div></div><span></span><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-      "<span></span><span></span><div></div>",
-      "<span></span><span></span><div></div>",
-    ],
-    5: [
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><span></span>",
-      "<div></div><div></div><div></div>",
-      "<span></span><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-    ],
-    6: [
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><span></span>",
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-    ],
-    7: [
-      "<div></div><div></div><div></div>",
-      "<span></span><span></span><div></div>",
-      "<span></span><span></span><div></div>",
-      "<span></span><span></span><div></div>",
-      "<span></span><span></span><div></div>",
-    ],
-    8: [
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-    ],
-    9: [
-      "<div></div><div></div><div></div>",
-      "<div></div><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-      "<span></span><span></span><div></div>",
-      "<div></div><div></div><div></div>",
-    ],
-  }
+import "./page.css"
 
-  return (
-    <div className="digital">
-      {(patterns[number as keyof typeof patterns] as string[]).map(
-        (line, index) => (
-          <div key={index} dangerouslySetInnerHTML={{ __html: line }} />
-        )
-      )}
-    </div>
-  )
-}
+const timeComponents = [Plain, Time, Emoji]
+const themes = ["black", "yellow", "default"]
+const fonts = ["inter", "silk", "jet", "ibm", "default"]
+type ActiveState = "none" | "dim" | "bright"
 
 export default function TimePage() {
-  const [time, setTime] = useState(new Date())
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [isActive, setIsActive] = useState(false)
+  const [themeIndex, setThemeIndex] = useState(0)
+  const [fontIndex, setFontIndex] = useState(0)
+  const activeStates: ActiveState[] = ["none", "dim", "bright"]
+
+  const [activeState, setActiveState] = useState<ActiveState>("none")
+
+  const cycleTheme = (direction: "up" | "down") => {
+    setThemeIndex((prev) => {
+      if (direction === "up") {
+        return (prev + 1) % themes.length
+      } else {
+        return prev === 0 ? themes.length - 1 : prev - 1
+      }
+    })
+  }
+
+  const cycleFont = (isSpace: boolean) => {
+    setFontIndex((prev) => {
+      if (isSpace) {
+        return (prev + 1) % fonts.length
+      } else {
+        return prev === 0 ? fonts.length - 1 : prev - 1
+      }
+    })
+  }
+
+  const cycleActive = () => {
+    setIsActive((prev) => !prev)
+  }
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTime(new Date())
-    }, 1000)
-
-    return () => {
-      clearInterval(timer)
+    const handleKeyDown = (e: KeyboardEvent) => {
+      switch (e.key) {
+        case "ArrowRight":
+          setCurrentIndex((prev) => (prev + 1) % timeComponents.length)
+          break
+        case "ArrowLeft":
+          setCurrentIndex((prev) =>
+            prev === 0 ? timeComponents.length - 1 : prev - 1
+          )
+          break
+        case "ArrowUp":
+          cycleTheme("up")
+          break
+        case "ArrowDown":
+          cycleTheme("down")
+          break
+        case "Enter":
+          cycleFont(false)
+          break
+        case " ": // Space
+          e.preventDefault() // Prevent page scroll
+          cycleActive()
+          break
+      }
     }
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
   }, [])
 
-  const hours = time.getHours()
-  const minutes = time.getMinutes()
-  const seconds = time.getSeconds()
+  // ... your existing inactivity timer code ...
+
+  const CurrentComponent = timeComponents[currentIndex]
 
   return (
     <Home>
-      <section className="timer">
-        <DigitalNumber number={Math.floor(hours / 10)} />
-        <DigitalNumber number={hours % 10} />
-        {/* <span>:</span> */}
-        <DigitalNumber number={Math.floor(minutes / 10)} />
-        <DigitalNumber number={minutes % 10} />
-        {/* <span>:</span> */}
-        <DigitalNumber number={Math.floor(seconds / 10)} />
-        <DigitalNumber number={seconds % 10} />
-      </section>
+      <div
+        className={`time-container ${isActive ? "active" : ""} theme-${themes[themeIndex]} font-${fonts[fontIndex]}`}
+      >
+        <CurrentComponent />
+      </div>
     </Home>
   )
 }

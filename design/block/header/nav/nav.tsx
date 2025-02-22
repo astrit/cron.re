@@ -9,7 +9,7 @@ import "./nav.css"
 
 const Links = [
   { href: "/", label: "C R ＊ N", title: "Cron" },
-  { href: "/time", label: <Time />, title: "time" },
+  { href: "/time", label: "Time", title: "time" },
 ]
 
 export default function Nav() {

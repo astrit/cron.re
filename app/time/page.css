@@ -1,0 +1,65 @@
+/* Theme classes */
+body:has(.theme-black) {
+  --bg-color: #000;
+  --text-color: #fff;
+}
+
+body:has(.theme-yellow) {
+  --bg-color: #fc0;
+  --text-color: #000;
+}
+
+body:has(.theme-default) {
+  --bg-color: initial;
+  --text-color: var(--color-text-1);
+}
+
+/* Font classes */
+.font-inter {
+  font-family: var(--slant-font-inter);
+}
+
+.font-silk {
+  font-family: var(--slant-font-silk);
+}
+
+.font-jet {
+  font-family: var(--slant-font-jet);
+}
+
+.font-ibm {
+  font-family: var(--slant-font-ibm), monospace;
+}
+
+.font-default {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* .time-container.active {
+  opacity: 0.5;
+} */
+
+body:has(.time-container) {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.main-header,
+.main-footer {
+  transition: all 420ms;
+}
+
+body:has(.time-container.active) {
+  .main-header {
+    translate: 0 -100%;
+    opacity: 0;
+  }
+
+  .main-footer {
+    translate: 0 100%;
+    opacity: 0;
+  }
+}

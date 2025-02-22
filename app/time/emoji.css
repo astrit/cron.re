@@ -1,0 +1,51 @@
+.emoji {
+  display: flex;
+  gap: 10ch;
+  transition: all 420ms;
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .digital {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    .line {
+      display: flex;
+      gap: 2px;
+
+      div,
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 200px;
+        transition: filer 420ms;
+        font-size: 8px;
+
+        @starting-style {
+          filter: blur(2px);
+          translate: translateY(10px);
+        }
+        /* 
+        &::before {
+          content: "22";
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 200px;
+        } */
+      }
+
+      span {
+        opacity: 0.1;
+        filter: blur(2px);
+      }
+    }
+  }
+}

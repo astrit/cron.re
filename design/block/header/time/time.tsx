@@ -23,5 +23,6 @@ export default function Time() {
     }
   }, [])
 
-  return <time dateTime={time}>{time || "00:00:00"}</time>
+  // return <time dateTime={time}>{time || "00:00:00"}</time>
+  return <time dateTime={time}>{time}</time>
 }

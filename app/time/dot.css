@@ -2,6 +2,13 @@
   display: flex;
   gap: 10ch;
 
+  transition: all 420ms;
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
   .digital {
     display: flex;
     flex-direction: column;
@@ -34,3 +41,26 @@
     */
   }
 }
+/* 
+.time-container {
+  transition: opacity 0.3s ease;
+}
+
+.time-container.active {
+  opacity: 0.5;
+}
+
+.time-container > * {
+  animation: fade-in 0.3s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
