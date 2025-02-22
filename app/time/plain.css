@@ -1,9 +1,10 @@
 .plain {
   /* font-family: var(--font-manrope); */
-  font-size: 20vh;
+  font-size: 8vh;
   user-select: none;
   pointer-events: none;
   transition: all 420ms;
+  letter-spacing: 0.2ch;
 
   @starting-style {
     opacity: 0;

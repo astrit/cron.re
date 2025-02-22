@@ -11,14 +11,14 @@ import "./page.css"
 
 const timeComponents = [Plain, Time, Emoji]
 const themes = ["black", "yellow", "default"]
-const fonts = ["inter", "silk", "jet", "ibm", "default"]
+const fonts = ["inter", "silk", "jet", "ibm", "manrope", "default"]
 type ActiveState = "none" | "dim" | "bright"
 
 export default function TimePage() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isActive, setIsActive] = useState(false)
-  const [themeIndex, setThemeIndex] = useState(0)
-  const [fontIndex, setFontIndex] = useState(0)
+  const [themeIndex, setThemeIndex] = useState(2)
+  const [fontIndex, setFontIndex] = useState(4)
   const activeStates: ActiveState[] = ["none", "dim", "bright"]
 
   const [activeState, setActiveState] = useState<ActiveState>("none")

@@ -31,6 +31,10 @@ body:has(.theme-default) {
   font-family: var(--slant-font-ibm), monospace;
 }
 
+.font-manrope {
+  font-family: var(--font-manrope), monospace;
+}
+
 .font-default {
   font-family:
     system-ui,
