@@ -53,23 +53,23 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <Suspense fallback={<Preloader />}>
-          <Provider
-            attribute="theme"
-            defaultTheme="dark"
-            enableColorScheme={false}
-            enableSystem={true}
-          >
-            <Favicon />
-            <Fonts>
-              <Main>
-                <Header />
-                <Article>{children}</Article>
-                <Footer />
-              </Main>
-            </Fonts>
-          </Provider>
-        </Suspense>
+        {/* <Suspense fallback={<Preloader />}> */}
+        <Provider
+          attribute="theme"
+          defaultTheme="dark"
+          enableColorScheme={false}
+          enableSystem={true}
+        >
+          <Favicon />
+          <Fonts>
+            <Main>
+              <Header />
+              <Article>{children}</Article>
+              <Footer />
+            </Main>
+          </Fonts>
+        </Provider>
+        {/* </Suspense> */}
         <Analytics />
       </body>
     </html>
