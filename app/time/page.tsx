@@ -79,8 +79,18 @@ export default function TimePage() {
   }, [])
 
   // ... your existing inactivity timer code ...
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    if (params.get("framed") !== null) {
+      setIsActive(true)
+    }
+  }, [])
+
+  // ... your existing inactivity timer code ...
 
   const CurrentComponent = timeComponents[currentIndex]
+
+  // const CurrentComponent = timeComponents[currentIndex]
 
   return (
     <Home>
