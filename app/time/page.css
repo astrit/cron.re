@@ -51,10 +51,10 @@ body:has(.time-container) {
   color: var(--text-color);
 }
 
-.main-header,
+/* .main-header,
 .main-footer {
   transition: all 420ms;
-}
+} */
 
 body:has(.time-container.active) {
   .main-header {
