@@ -38,3 +38,15 @@ body {
     opacity: 1;
   }
 }
+
+body:has(.HIDE_UI.active) {
+  .main-header {
+    translate: 0 -100%;
+    opacity: 0;
+  }
+
+  .main-footer {
+    translate: 0 100%;
+    opacity: 0;
+  }
+}

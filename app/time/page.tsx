@@ -95,7 +95,7 @@ export default function TimePage() {
   return (
     <Home>
       <div
-        className={`time-container ${isActive ? "active" : ""} theme-${themes[themeIndex]} font-${fonts[fontIndex]}`}
+        className={`time-container HIDE_UI ${isActive ? "active" : ""} theme-${themes[themeIndex]} font-${fonts[fontIndex]}`}
       >
         <CurrentComponent />
       </div>

@@ -9,7 +9,8 @@ import "./nav.css"
 
 const Links = [
   { href: "/", label: "C R ＊ N", title: "Cron" },
-  { href: "/time", label: "Time", title: "time" },
+  { href: "/time", label: "Time", title: "Lime" },
+  { href: "/lightbox", label: "Lightbox", title: "Lightbox" },
 ]
 
 export default function Nav() {
